@@ -3,6 +3,9 @@
 		"src/routes/+layout.ts",
 		"src/routes/+layout.ts"
 	],
+	"/GameMenu": [
+		"src/routes/+layout.ts"
+	],
 	"/cube": [
 		"src/routes/+layout.ts"
 	]

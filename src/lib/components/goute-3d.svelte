@@ -8,7 +8,7 @@
 
     onMount(async () => {
         scene = new THREE.Scene();
-        scene.background = new THREE.Color('white');
+        scene.background = new THREE.Color('#F7FDFF');
         const aspectRatio = window.innerWidth / window.innerHeight;
         camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
         camera.position.set(0, (-400), (100));
@@ -69,7 +69,10 @@
 </script>
 
 
-<div id="three-container" class="mt-40">
+<div id="three-container" class=" relative">
+    <img src="/rewards.png" class="absolute z-50 w-20 top-40 left-5" alt="rewards"/>
+    <img src="/personnalisation.png" class="absolute z-50 w-20 top-60 right-5" alt="perso"/>
+    <img src="/games.png" alt="games" class="absolute z-50 w-20 top-96 left-5">
 </div>
 
 <style>

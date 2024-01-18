@@ -4,14 +4,16 @@ export const nodes = [
 	() => import('./nodes/0'),
 	() => import('./nodes/1'),
 	() => import('./nodes/2'),
-	() => import('./nodes/3')
+	() => import('./nodes/3'),
+	() => import('./nodes/4')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
-		"/cube": [3]
+		"/GameMenu": [3],
+		"/cube": [4]
 	};
 
 export const hooks = {
