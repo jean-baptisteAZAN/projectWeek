@@ -13,12 +13,11 @@
 
     function onVideoEnd() {
         animeVisible = true;
-        // You can perform other actions here
     }
 </script>
 
 {#if !animeVisible}
-    <video width="750" height="500" controls on:ended={onVideoEnd} autoplay>
+    <video out:fade={{duration : 400}} on:ended={onVideoEnd} autoplay playsinline muted preload="metadata">
         <source src="/animLogo.mp4" type="video/mp4">
     </video>
 {:else}
