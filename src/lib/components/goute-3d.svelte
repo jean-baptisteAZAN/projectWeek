@@ -5,13 +5,14 @@
     import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
     let camera, scene, renderer;
+    let loadedGltfScene = null;
 
     onMount(async () => {
         scene = new THREE.Scene();
         scene.background = new THREE.Color('#F7FDFF');
         const aspectRatio = window.innerWidth / window.innerHeight;
         camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-        camera.position.set(0, (-400), (100));
+        camera.position.set(5, 3, 0);
 
         renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -31,7 +32,7 @@
 
         const loader = new GLTFLoader();
         loader.load(
-            'goutte_eau.gltf',
+            'mascotte.glb',
             function (gltf) {
                 gltf.scene.traverse(function (object) {
                     if (object.isMesh) {
@@ -39,6 +40,7 @@
                         object.receiveShadow = true;
                     }
                 });
+                gltf.scene.position.set(0, (-1), 1);
                 scene.add(gltf.scene);
             },
             undefined,
@@ -56,6 +58,8 @@
         light.shadow.radius = 4;
 
         const controls = new OrbitControls(camera, renderer.domElement);
+        controls.minPolarAngle = Math.PI / 2;
+        controls.maxPolarAngle = Math.PI / 2;
         controls.update();
 
         function animate() {
@@ -65,12 +69,22 @@
         }
 
         animate();
+
     });
+    function logCameraPosition() {
+        if (camera) {
+            console.log('Camera Position:', camera.position);
+            // Pour plus de détails, tels que les valeurs individuelles de x, y, et z :
+            console.log('X:', camera.position.x, 'Y:', camera.position.y, 'Z:', camera.position.z);
+        } else {
+            console.log('Camera is not defined');
+        }
+    }
 </script>
 
 
 <div id="three-container" class=" relative">
-    <img src="/rewards.png" class="absolute z-50 w-20 top-40 left-5" alt="rewards"/>
+    <img src="/rewards.png" class="absolute z-50 w-20 top-40 left-5" alt="rewards" on:click={()=> logCameraPosition()}/>
     <img src="/personnalisation.png" class="absolute z-50 w-20 top-60 right-5" alt="perso"/>
     <img src="/games.png" alt="games" class="absolute z-50 w-20 top-96 left-5">
 </div>
