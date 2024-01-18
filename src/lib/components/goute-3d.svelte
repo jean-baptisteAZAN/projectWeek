@@ -38,6 +38,7 @@
                     if (object.isMesh) {
                         object.castShadow = true;
                         object.receiveShadow = true;
+
                     }
                 });
                 gltf.scene.position.set(0, (-1), 1);
@@ -50,11 +51,11 @@
         );
 
         const light = new THREE.PointLight(0xffffff, 1);
-        light.position.set(3, 3, 3);
+        light.position.set(12, 3, 3);
         light.castShadow = true;
         scene.add(light);
 
-        light.shadow.bias = -0.002;
+        light.shadow.bias = -0.001;
         light.shadow.radius = 4;
 
         const controls = new OrbitControls(camera, renderer.domElement);

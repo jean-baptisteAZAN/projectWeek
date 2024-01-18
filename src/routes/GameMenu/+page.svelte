@@ -76,7 +76,7 @@
     </div>
 </div>
 <Goute />
-<div class="absolute top-[70%] w-screen left-0 right-0 mx-auto">
+<div class="absolute bottom-40 w-screen left-0 right-0 mx-auto">
     <p class="text-center text-3xl">
         {nameValue}
     </p>
