@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+<<<<<<< HEAD
 	export const MANPATH: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -80,6 +81,40 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const NODE_ENV: string;
+=======
+	export const PATH: string;
+	export const FORCE_COLOR: string;
+	export const MANPATH: string;
+	export const HOMEBREW_PREFIX: string;
+	export const DEBUG_COLORS: string;
+	export const COMMAND_MODE: string;
+	export const npm_config_color: string;
+	export const MOCHA_COLORS: string;
+	export const COLORTERM: string;
+	export const LOGNAME: string;
+	export const HOMEBREW_REPOSITORY: string;
+	export const XPC_SERVICE_NAME: string;
+	export const PWD: string;
+	export const INFOPATH: string;
+	export const __CFBundleIdentifier: string;
+	export const SHELL: string;
+	export const PAGER: string;
+	export const LSCOLORS: string;
+	export const OLDPWD: string;
+	export const HOMEBREW_CELLAR: string;
+	export const USER: string;
+	export const ZSH: string;
+	export const TMPDIR: string;
+	export const SSH_AUTH_SOCK: string;
+	export const XPC_FLAGS: string;
+	export const __CF_USER_TEXT_ENCODING: string;
+	export const LESS: string;
+	export const NODE_ENV: string;
+	export const LC_CTYPE: string;
+	export const LS_COLORS: string;
+	export const IDEA_INITIAL_DIRECTORY: string;
+	export const HOME: string;
+>>>>>>> be220b8334cff2619d5b527dcb7c9184d01db152
 }
 
 /**
@@ -109,6 +144,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+<<<<<<< HEAD
 		MANPATH: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -163,6 +199,40 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		NODE_ENV: string;
+=======
+		PATH: string;
+		FORCE_COLOR: string;
+		MANPATH: string;
+		HOMEBREW_PREFIX: string;
+		DEBUG_COLORS: string;
+		COMMAND_MODE: string;
+		npm_config_color: string;
+		MOCHA_COLORS: string;
+		COLORTERM: string;
+		LOGNAME: string;
+		HOMEBREW_REPOSITORY: string;
+		XPC_SERVICE_NAME: string;
+		PWD: string;
+		INFOPATH: string;
+		__CFBundleIdentifier: string;
+		SHELL: string;
+		PAGER: string;
+		LSCOLORS: string;
+		OLDPWD: string;
+		HOMEBREW_CELLAR: string;
+		USER: string;
+		ZSH: string;
+		TMPDIR: string;
+		SSH_AUTH_SOCK: string;
+		XPC_FLAGS: string;
+		__CF_USER_TEXT_ENCODING: string;
+		LESS: string;
+		NODE_ENV: string;
+		LC_CTYPE: string;
+		LS_COLORS: string;
+		IDEA_INITIAL_DIRECTORY: string;
+		HOME: string;
+>>>>>>> be220b8334cff2619d5b527dcb7c9184d01db152
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
