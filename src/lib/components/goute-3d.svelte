@@ -7,6 +7,22 @@
     let camera, scene, renderer;
     let loadedGltfScene = null;
 
+
+    let colorIndex = 0;
+    const colors = [new THREE.Color(0xff0000), new THREE.Color(0x0000ff), new THREE.Color(0x00ff00)];
+    let currentColor = colors[0];
+    let nextColor = colors[1];
+    let lerpFactor = 0;
+
+    function changeColor() {
+        currentColor = colors[colorIndex % colors.length];
+        nextColor = colors[(colorIndex + 1) % colors.length];
+        colorIndex++;
+        lerpFactor = 0;
+    }
+
+    setInterval(changeColor, 4000);
+
     onMount(async () => {
         scene = new THREE.Scene();
         scene.background = new THREE.Color('#F7FDFF');
@@ -38,9 +54,9 @@
                     if (object.isMesh) {
                         object.castShadow = true;
                         object.receiveShadow = true;
-
                     }
                 });
+                loadedGltfScene = gltf.scene;
                 gltf.scene.position.set(0, (-1), 1);
                 scene.add(gltf.scene);
             },
@@ -62,9 +78,20 @@
         controls.minPolarAngle = Math.PI / 2;
         controls.maxPolarAngle = Math.PI / 2;
         controls.update();
+        controls.enableZoom = false;
+
 
         function animate() {
             requestAnimationFrame(animate);
+            if (loadedGltfScene) {
+                lerpFactor += 0.01; // Ajustez cette valeur pour changer la vitesse de transition
+                loadedGltfScene.traverse(function (object) {
+                    if (object.isMesh && object.material) {
+                        object.material.color.lerpColors(currentColor, nextColor, lerpFactor);
+                    }
+                });
+            }
+
             controls.update();
             renderer.render(scene, camera);
         }
