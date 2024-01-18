@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<div class="absolute bottom-0 w-screen flex flex-row items-center justify-between py-2 px-10">
-=======
+<div class="absolute bottom-0 w-screen flex flex-row items-center justify-between py-2 px-10"/>
 <div class="absolute bottom-0 w-screen h-20 flex flex-row items-center justify-between gap-10 px-10">
->>>>>>> be220b8334cff2619d5b527dcb7c9184d01db152
     <div class="w-screen h-1 bg-opacity-20 bg-gray-500 absolute top-0 left-0"/>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
