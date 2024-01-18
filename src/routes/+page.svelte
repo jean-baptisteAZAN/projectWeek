@@ -26,8 +26,8 @@
         </button>
     </div>
 {:else}
-    <div on:click={()=> visible = false} class="bg-white w-screen absolute top-0 z-40 items-center justify-center flex flex-col">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-bar-left absolute top-5 left-5" viewBox="0 0 16 16">
+    <div class="bg-white w-screen absolute top-0 z-40 items-center justify-center flex flex-col">
+        <svg on:click={()=> visible = false} xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-bar-left absolute top-5 left-5" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
         </svg>
         <img src="/Logo_EFS.svg.png" class="w-40 mt-5" alt="logo"/>
