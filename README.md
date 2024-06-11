@@ -1,58 +1,26 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Project week
+Project Week - EFS Blood Donation App
 
-## Creating a project
+Welcome to the Project Week repository! This project is a mini-demo of a mobile application created using Three.js, specifically designed for the French Blood Establishment (EFS). The goal of this project is to provide an idea for a mobile app aimed at increasing blood donation loyalty and engagement through gamification, games, activities, and mascots.
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This project was developed during a project week and showcases a mini-demo of a mobile application designed to enhance the blood donation experience for users. The app aims to gamify the donation process, making it more engaging and enjoyable through interactive games, activities, and the use of mascots.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Objectives
+Gamification of Blood Donation: Make the process of donating blood more fun and engaging.
+Increase Donor Loyalty: Encourage repeat donations by providing a rewarding experience.
+Interactive Activities: Offer various games and activities to keep users entertained and informed about the importance of blood donation.
+Mascots: Use mascots to create a friendly and inviting atmosphere.
+Features
 
-## Switching configuration for static hosting
-
-Please follow this [SvelteKit tutorial](https://kit.svelte.dev/docs/adapter-static) for more information.
-
-## Serving in a domain subpath
-
-change `adapter` and `paths` configurations in `svelte.config.js` under `kit`:
-
-```js
-kit: {
-  adapter: adapter({
-    pages: process.env.NODE_ENV === "production" ? "build/mysubpath" : undefined,
-    assets: process.env.NODE_ENV === "production" ? "build/mysubpath" : undefined,
-  }),
-  paths: {
-    base: process.env.NODE_ENV === "production" ? "/mysubpath" : undefined,
-  },
-}
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+    git@github.com:jean-baptisteAZAN/projectWeek.git
+    cd projectWeek
 ```
-
-## Building
-
-To create a production version of your app:
-
+## And run by using 
 ```bash
-npm run build
+    npm i && npm run dev -- --open
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
